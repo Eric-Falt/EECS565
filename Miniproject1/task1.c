@@ -48,11 +48,12 @@ int main()
     printf("Enter '0' to encrypt the message, or '1' to decrypt the message");
     scanf("%d", &encrypt);
 
+    // Enter one to encrypt the message or 1 to decrypt it and prints the new message using the key
     if (encrypt == 0)
     {
         for (int i = 0; message[i] != '\0'; ++i)
         {
-            printf("%c", ((message[i] - 'A') + (key[i % strlen(key)] - 'A')) % 26 + 'A');
+            printf("%c", ((message[i] - 'A') - (key[i % strlen(key)] - 'A')) % 26 + 'A');
         }
     }
     else
