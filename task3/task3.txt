@@ -1,0 +1,7 @@
+1) For short key lengths, using a brute force strategy works very quickly, cracking the code in a few minutes, 
+but the time complexity can quickly increase as the keysize goes up due to the exponential nature of the keyspace (being 26^n letters keys where n is the length of the key) 
+This task would be even more difficult provided we would've needed to figure out the key length and the first word length aswell. 
+
+2) The first optimization technique I used was the one given in the assignment that I missed when i first read it, being loading the dictionary into memory before doing any calculations, this was the biggest 
+time saver by far as reading the file each time took a lot of calculations and resources epsecially as the key length got longer. The other technique I used was only looking at the part of the array
+that matched the first word length which dramatically reduced the number of words that the algorithm had to search through to get to the correct one. 
